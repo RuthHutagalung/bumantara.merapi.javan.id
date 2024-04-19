@@ -7,60 +7,70 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gradient-to-r from-blue-50 to-blue-100 p-10">
-    <div class="max-w-3xl mx-auto p-8 bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-xl rounded-2xl border border-blue-300">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Daily Scrum</h2>
+    <div class="max-w-1x2 mx-auto p-8 bg-white bg-opacity-90 shadow-xl rounded-2xl border border-gray-300">
+        <h2 class="text-xl font-bold text-gray-800 mb-6 text-center">Daily Scrum</h2>
         <form>
+            <div class="flex gap-4 mb-6">
+                <div class="w-1/2">
+                    <label for="analystName" class="block text-sm font-semibold text-gray-800 mb-2">Analyst Name</label>
+                    <select id="analystName" class="block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:border-blue-300">
+                        <option>Select...</option>
+                        <option>Purwa Darozatun</option>
+                        <!-- Add more options here -->
+                    </select>
+                </div>
+                <div class="w-1/2">
+                    <label for="project" class="block text-sm font-semibold text-gray-800 mb-2">Project</label>
+                    <select id="project" class="block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:border-blue-300">
+                        <option>Select...</option>
+                        <option>Learning WBS</option>
+                        <option>KPI Javan System</option>
+                        <option>PLN - DevOps</option>    
+                        <!-- Add more options here -->
+                    </select>
+                </div>
+            </div>
+
             <div class="mb-6">
-                <label for="analystName" class="block text-sm font-semibold text-gray-800 mb-2">Analyst Name</label>
-                <select id="analystName" class="block w-full py-3 px-4 border border-blue-300 rounded-md shadow-sm transition duration-200 ease-in-out focus:outline-none focus:ring-4 focus:ring-blue-200 focus:border-blue-500">
-                    <option>Select...</option>
+                <h3 class="text-md font-semibold text-gray-800 mb-4">Today's Target</h3>
+                <!-- Task list here -->
+                <div class="flex items-center mb-4">
+                    <select id="Nama Anggota" class="py-2 px-3 border border-gray-300 rounded-md shadow-sm flex-1 mr-3 focus:outline-none focus:border-blue-300">
+                    <option>Nama Anggota...</option>
                     <option>Purwa Darozatun</option>
-                    <!-- Add more options here -->
-                </select>
-            </div>
-            <div class="mb-6">
-                <label for="project" class="block text-sm font-semibold text-gray-800 mb-2">Project</label>
-                <select id="project" class="block w-full py-3 px-4 border border-blue-300 rounded-md shadow-sm transition duration-200 ease-in-out focus:outline-none focus:ring-4 focus:ring-blue-200 focus:border-blue-500">
-                    <option>Select...</option>
-                    <option>Learning WBS</option>
-                    <option>KPI Javan System</option>
-                    <option>PLN - DevOps</option>
-                    <!-- Add more options here -->
-                </select>
-            </div>
-            <div class="mb-6">
-                <h3 class="text-md font-semibold text-gray-800 mb-4">Target Hari Ini</h3>
-                <div class="grid grid-cols-3 gap-4 mb-3">
-                    <input type="text" placeholder="Nama Anggota" class="py-3 px-4 border border-blue-300 rounded-md shadow-sm transition duration-200 ease-in-out focus:outline-none focus:border-blue-500">
-                    <input type="text" placeholder="Url Task" class="py-3 px-4 border border-blue-300 rounded-md shadow-sm transition duration-200 ease-in-out focus:outline-none focus:border-blue-500">
-                    <input type="text" placeholder="Status Task" class="py-3 px-4 border border-blue-300 rounded-md shadow-sm transition duration-200 ease-in-out focus:outline-none focus:border-blue-500">
+                    <input type="text" placeholder="Url Task" class="py-2 px-3 border border-gray-300 rounded-md shadow-sm flex-1 mr-3 focus:outline-none focus:border-blue-300">
+                    <select class="py-2 px-3 border border-gray-300 rounded-md shadow-sm flex-1 focus:outline-none focus:border-blue-300">
+                        <option>Status Task...</option>
+                        <option>Ready</option>
+                        <option>Feedback</option>
+                        <option>Ready for Test</option> 
+                        <!-- Add more status options here -->
+                    </select>
+                    <button type="button" class="ml-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                        +
+                    </button>
                 </div>
-                <button type="button" class="flex items-center justify-center h-10 w-10 text-white bg-gradient-to-br from-blue-600 to-blue-400 rounded-full hover:from-blue-700 hover:to-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-200 focus:ring-opacity-50 transition duration-200 ease-in-out">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                    </svg>
-                </button>
             </div>
+
             <div class="mb-6">
-                <h3 class="text-md font-semibold text-gray-800 mb-4">Task Terlambat</h3>
-                <div class="grid grid-cols-3 gap-4 mb-3">
-                    <input type="text" placeholder="Nama Anggota" class="py-3 px-4 border border-blue-300 rounded-md shadow-sm transition duration-200 ease-in-out focus:outline-none focus:border-blue-500">
-                    <input type="text" placeholder="Url Task" class="py-3 px-4 border border-blue-300 rounded-md shadow-sm transition duration-200 ease-in-out focus:outline-none focus:border-blue-500">
-                    <input type="text" placeholder="Alasan Terlambat" class="py-3 px-4 border border-blue-300 rounded-md shadow-sm transition duration-200 ease-in-out focus:outline-none focus:border-blue-500">
+                <h3 class="text-md font-semibold text-gray-800 mb-4">Late Task</h3>
+                <!-- Delayed task list here -->
+                <div class="flex items-center mb-4">
+                    <select id="Nama Anggota" class="py-2 px-3 border border-gray-300 rounded-md shadow-sm flex-1 mr-3 focus:outline-none focus:border-blue-300">
+                    <option>Nama Anggota...</option>
+                    <option>Purwa Darozatun</option>
+                    <input type="text" placeholder="Url Task" class="py-2 px-3 border border-gray-300 rounded-md shadow-sm flex-1 mr-3 focus:outline-none focus:border-blue-300">
+                    <input type="text" placeholder="Alasan Terlambat" class="py-2 px-3 border border-gray-300 rounded-md shadow-sm flex-1 focus:outline-none focus:border-blue-300">
+                    <button type="button" class="ml-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                        +
+                    </button>
                 </div>
-                <button type="button" class="flex items-center justify-center h-10 w-10 text-white bg-gradient-to-br from-blue-600 to-blue-400 rounded-full hover:from-blue-700 hover:to-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-200 focus:ring-opacity-50 transition duration-200 ease-in-out">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                    </svg>
-                </button>
             </div>
-            <div class="flex justify-end space-x-4">
-                <button type="button" class="py-3 px-6 border border-gray-300 text-gray-800 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-blue-200 focus:border-blue-500 transition duration-200 ease-in-out">
+
+            <div class="flex justify-between">
+                <button type="button" class="py-2 px-6 bg-blue-400 hover:bg-gray-300 rounded-md shadow-sm text-white focus:outline-none focus:ring focus:border-blue-300 transition duration-200 ease-in-out">
                     Cancel
                 </button>
-                <button type="submit" class="py-3 px-6 bg-gradient-to-br from-blue-600 to-blue-400 text-white rounded-md hover:from-blue-700 hover:to-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-200 focus:ring-opacity-50 transition duration-200 ease-in-out">
+                <button type="Submit" class="py-2 px-6 bg-blue-400 hover:bg-gray-300 rounded-md shadow-sm text-white focus:outline-none focus:ring focus:border-blue-300 transition duration-200 ease-in-out">
                     Submit
                 </button>
-            </div>
-        </form>
-    </div>
