@@ -4,52 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Scrum Form</title>
-    <!-- Include Tailwind CSS from CDN for simplicity -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 p-8">
-    <div class="max-w-2xl mx-auto p-6 bg-white shadow-md rounded-lg">
-        <h2 class="text-lg font-semibold mb-4">Daily Scrum</h2>
+<body class="bg-gradient-to-r from-blue-50 to-blue-100 p-10">
+    <div class="max-w-3xl mx-auto p-8 bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-xl rounded-2xl border border-blue-300">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Daily Scrum</h2>
         <form>
-            <div class="mb-4">
-                <label for="analystName" class="block text-sm font-medium text-gray-700">Analyst Name</label>
-                <select id="analystName" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            <div class="mb-6">
+                <label for="analystName" class="block text-sm font-semibold text-gray-800 mb-2">Analyst Name</label>
+                <select id="analystName" class="block w-full py-3 px-4 border border-blue-300 rounded-md shadow-sm transition duration-200 ease-in-out focus:outline-none focus:ring-4 focus:ring-blue-200 focus:border-blue-500">
                     <option>Select...</option>
-                    <!-- Add options here -->
+                    <option>Purwa Darozatun</option>
+                    <!-- Add more options here -->
                 </select>
-            </div>
-            <div class="mb-4">
-                <label for="project" class="block text-sm font-medium text-gray-700">Project</label>
-                <select id="project" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                    <option>Select...</option>
-                    <!-- Add options here -->
-                </select>
-            </div>
-            <div class="mb-4">
-                <h3 class="text-md font-semibold mb-2">Target Hari Ini</h3>
-                <!-- Dynamic task list would go here -->
-                <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                    <!-- Icons can be added with Tailwind CSS if needed -->
-                    +
-                </button>
             </div>
             <div class="mb-6">
-                <h3 class="text-md font-semibold mb-2">Task Terlambat</h3>
-                <!-- Dynamic delayed task list would go here -->
-                <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                    <!-- Icons can be added with Tailwind CSS if needed -->
-                    +
+                <label for="project" class="block text-sm font-semibold text-gray-800 mb-2">Project</label>
+                <select id="project" class="block w-full py-3 px-4 border border-blue-300 rounded-md shadow-sm transition duration-200 ease-in-out focus:outline-none focus:ring-4 focus:ring-blue-200 focus:border-blue-500">
+                    <option>Select...</option>
+                    <option>Learning WBS</option>
+                    <option>KPI Javan System</option>
+                    <option>PLN - DevOps</option>
+                    <!-- Add more options here -->
+                </select>
+            </div>
+            <div class="mb-6">
+                <h3 class="text-md font-semibold text-gray-800 mb-4">Target Hari Ini</h3>
+                <div class="grid grid-cols-3 gap-4 mb-3">
+                    <input type="text" placeholder="Nama Anggota" class="py-3 px-4 border border-blue-300 rounded-md shadow-sm transition duration-200 ease-in-out focus:outline-none focus:border-blue-500">
+                    <input type="text" placeholder="Url Task" class="py-3 px-4 border border-blue-300 rounded-md shadow-sm transition duration-200 ease-in-out focus:outline-none focus:border-blue-500">
+                    <input type="text" placeholder="Status Task" class="py-3 px-4 border border-blue-300 rounded-md shadow-sm transition duration-200 ease-in-out focus:outline-none focus:border-blue-500">
+                </div>
+                <button type="button" class="flex items-center justify-center h-10 w-10 text-white bg-gradient-to-br from-blue-600 to-blue-400 rounded-full hover:from-blue-700 hover:to-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-200 focus:ring-opacity-50 transition duration-200 ease-in-out">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                    </svg>
                 </button>
             </div>
-            <div class="flex justify-end">
-                <button type="button" class="mr-2 inline-flex justify-center py-2 px-4 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <!-- Task Terlambat section will be similar to the Target Hari Ini section -->
+
+            <div class="flex justify-end space-x-4">
+                <button type="button" class="py-3 px-6 border border-gray-300 text-gray-800 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-blue-200 focus:border-blue-500 transition duration-200 ease-in-out">
                     Cancel
                 </button>
-                <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                <button type="submit" class="py-3 px-6 bg-gradient-to-br from-blue-600 to-blue-400 text-white rounded-md hover:from-blue-700 hover:to-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-200 focus:ring-opacity-50 transition duration-200 ease-in-out">
                     Submit
                 </button>
             </div>
         </form>
     </div>
-</body>
-</html>
